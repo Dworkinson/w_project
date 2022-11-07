@@ -10,6 +10,8 @@ export class GetAuthToken extends BaseRequest {
         this.url = this.baseUrl + "/api/auth/login";
         this.method = "POST";
 
+        this.headers.Authorization = null;
+
         this.data = {
             api_key: apiKey
         }
