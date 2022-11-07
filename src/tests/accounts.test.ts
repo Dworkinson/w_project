@@ -12,7 +12,7 @@ describe("/api/accounts/..", async () => {
         await tokenController.checkToken();
     });
 
-    it("../balance", async () => {
+    it("GET api/accounts/balance", async () => {
         const request = new GetUserBalance();
         const response = await axios(request);
 
@@ -27,7 +27,7 @@ describe("/api/accounts/..", async () => {
             .to.be.most(0);
     });
 
-    it("../tariff", async () => {
+    it("GET api/accounts/tariff", async () => {
         const request = new GetTariffs();
         const response = await axios(request);
 
