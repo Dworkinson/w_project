@@ -8,7 +8,8 @@
     "stg:comm": "mocha --ENV staging --MODE common --require ts-node/register",
     "stg:test": "mocha --ENV staging --MODE test --require ts-node/register",
     "stg:demo": "mocha --ENV staging --MODE demo --require ts-node/register",
-    "getToken:stage": "npm run stg:comm src/tests/token.test.ts"
+    "getToken:stage": "npm run stg:comm src/tests/token.test.ts",
+    "accounts:stage": "npm run stg:comm src/tests/accounts.test.ts"
   },
   "keywords": [],
   "author": "",
