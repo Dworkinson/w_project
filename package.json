@@ -4,19 +4,23 @@
   "description": "api_automation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "generateEmptyToken": "ts-node src/helpers/generateEmptyTokens.ts",
+    "stg:comm": "mocha --ENV staging --MODE common --require ts-node/register",
+    "stg:test": "mocha --ENV staging --MODE test --require ts-node/register",
+    "stg:demo": "mocha --ENV staging --MODE demo --require ts-node/register",
+    "getToken:stage": "npm run stg:comm src/tests/token.test.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/minimist": "^1.2.2",
     "@types/mocha": "^9.1.1",
     "@types/node": "^18.0.0",
     "axios": "^0.27.2",
     "chai": "^4.3.6",
-    "dotenv": "^16.0.1",
+    "minimist": "^1.2.7",
     "mocha": "^10.0.0",
-    "querystring": "^0.2.1",
     "ts-node": "^10.8.1",
     "typescript": "^4.7.4"
   }

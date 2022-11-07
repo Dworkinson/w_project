@@ -1,0 +1,58 @@
+{
+  "staging": {
+    "common": {
+      "token": "",
+      "timestamp": 0
+    },
+    "test": {
+      "token": "",
+      "timestamp": 0
+    },
+    "demo": {
+      "token": "",
+      "timestamp": 0
+    }
+  },
+  "dev": {
+    "common": {
+      "token": "",
+      "timestamp": 0
+    },
+    "test": {
+      "token": "",
+      "timestamp": 0
+    },
+    "demo": {
+      "token": "",
+      "timestamp": 0
+    }
+  },
+  "rc": {
+    "common": {
+      "token": "",
+      "timestamp": 0
+    },
+    "test": {
+      "token": "",
+      "timestamp": 0
+    },
+    "demo": {
+      "token": "",
+      "timestamp": 0
+    }
+  },
+  "prod": {
+    "common": {
+      "token": "",
+      "timestamp": 0
+    },
+    "test": {
+      "token": "",
+      "timestamp": 0
+    },
+    "demo": {
+      "token": "",
+      "timestamp": 0
+    }
+  }
+}
