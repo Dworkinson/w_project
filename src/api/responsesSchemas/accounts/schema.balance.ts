@@ -1,4 +1,4 @@
-export interface Balance {
+export interface SchemaBalance {
     data: Data;
 }
 

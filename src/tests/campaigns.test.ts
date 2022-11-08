@@ -2,7 +2,7 @@ import {expect} from "chai";
 import axios from "axios";
 import {TokenController} from "../helpers/tokenController";
 import {GetCampaigns} from "../api/requests/campaigns/get.campaigns";
-import {Campaigns, MessageType, Status} from "../api/requests/campaigns/interfase.get.campaings";
+import {Campaigns, MessageType, Status} from "../api/responsesSchemas/campaigns/schema.campaings";
 import {checkNullableDate, lDateValidation} from "../helpers/commonFunctions/assertions";
 
 

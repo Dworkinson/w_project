@@ -1,10 +1,10 @@
 import {expect} from "chai";
 import axios from "axios";
 import {TokenController} from "../helpers/tokenController";
-import {GetUserBalance} from "../api/requests/account/get.user.balance";
-import {Balance} from "../api/requests/account/interfase.get.user.balance";
-import {GetTariffs} from "../api/requests/account/get.tariffs";
-import {Tariffs} from "../api/requests/account/interfase.get.tariff";
+import {GetUserBalance} from "../api/requests/accounts/get.user.balance";
+import {SchemaBalance} from "../api/responsesSchemas/accounts/schema.balance";
+import {GetTariffs} from "../api/requests/accounts/get.tariffs";
+import {SchemaTariffs} from "../api/responsesSchemas/accounts/schema.tariffs";
 
 describe("/api/accounts/..", async () => {
     beforeEach("Login", async () => {
@@ -18,7 +18,7 @@ describe("/api/accounts/..", async () => {
 
         expect(response.status).equal(200);
 
-        const data : Balance = response.data;
+        const data : SchemaBalance = response.data;
 
         expect(data.data.balance).to.be.a('number');
         expect(data.data.currency).to.be.a('string');
@@ -33,7 +33,7 @@ describe("/api/accounts/..", async () => {
 
         expect(response.status).equal(200);
 
-        const data : Tariffs = response.data;
+        const data : SchemaTariffs = response.data;
         data.data.forEach(tariff => {
             expect(tariff.id).to.be.a('number');
             expect(tariff.name).to.be.a('string');

@@ -1,4 +1,4 @@
-export interface Tariffs {
+export interface SchemaTariffs {
     data: Tariff[];
 }
 
