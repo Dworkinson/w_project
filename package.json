@@ -8,8 +8,12 @@
     "stg:comm": "mocha --ENV staging --MODE common --require ts-node/register --timeout 60000",
     "stg:test": "mocha --ENV staging --MODE test --require ts-node/register --timeout 60000",
     "stg:demo": "mocha --ENV staging --MODE demo --require ts-node/register --timeout 60000",
+    "dev:comm": "mocha --ENV dev --MODE common --require ts-node/register --timeout 60000",
+    "dev:test": "mocha --ENV dev --MODE test --require ts-node/register --timeout 60000",
+    "dev:demo": "mocha --ENV dev --MODE demo --require ts-node/register --timeout 60000",
     "getToken:stage": "npm run stg:comm src/tests/token.test.ts",
-    "accounts:stage": "npm run stg:comm src/tests/accounts.test.ts"
+    "accounts:stage": "npm run stg:comm src/tests/accounts.test.ts",
+    "campaigns:stage": "npm run stg:comm src/tests/campaigns.test.ts"
   },
   "keywords": [],
   "author": "",
