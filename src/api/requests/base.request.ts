@@ -6,6 +6,7 @@ import * as tokens from "../../data/tokens.json";
 export class BaseRequest implements AxiosRequestConfig {
     baseUrl: string;
     headers: AxiosRequestHeaders;
+    validateStatus: any;
 
     constructor() {
         this.baseUrl = config.baseUrl;
@@ -14,5 +15,6 @@ export class BaseRequest implements AxiosRequestConfig {
         };
 
         this.headers.Authorization = 'Bearer ' + tokens[config.env][config.mode].token;
+        this.validateStatus = false;
     }
 }
