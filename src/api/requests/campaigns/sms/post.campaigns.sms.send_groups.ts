@@ -1,37 +1,28 @@
-import {BaseRequest} from "../base.request";
+import {BaseRequest} from "../../base.request";
 
-export interface SendRequest {
-    phones?:      Phone[]; // required
+interface SendGroupRequest {
     sender?:      string; // required
     text?:        string; // required
-    tariff_code?: number;
+    groups?:      number[]; // required
     validity?:    number;
+    tariff_code?: number;
     start_at?:    lDate;
-}
-
-export interface Phone {
-    number:       number; // required
-    reference_id?: string;
 }
 
 type lDate = string;
 
-export class Send extends BaseRequest {
+
+export class SendGroups extends BaseRequest {
     url: string;
     method: string;
-    data: SendRequest;
+    data: SendGroupRequest
 
     constructor() {
         super();
-        this.url = this.baseUrl + "/api/campaigns/sms/send";
+        this.url = this.baseUrl + "/api/campaigns/sms/send-groups";
         this.method = "POST";
 
         this.data = {};
-    }
-
-    phones(phones: Phone[]) {
-        this.data.phones = phones;
-        return this;
     }
 
     sender(sender: string) {
@@ -44,8 +35,8 @@ export class Send extends BaseRequest {
         return this;
     }
 
-    tariffCode(tariff: number) {
-        this.data.tariff_code = tariff;
+    groups(groups: number[]) {
+        this.data.groups = groups;
         return this;
     }
 
@@ -54,8 +45,13 @@ export class Send extends BaseRequest {
         return this;
     }
 
-    startAt(date: lDate) {
-        this.data.start_at = date;
+    tariffCode(tariff: number) {
+        this.data.tariff_code = tariff;
+        return this;
+    }
+
+    startAt(start_at: lDate) {
+        this.data.start_at = start_at;
         return this;
     }
 }
