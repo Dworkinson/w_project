@@ -7,5 +7,6 @@ export class CampaignsDetail extends BaseRequest {
     constructor(id: number) {
         super();
         this.url = this.baseUrl + `/api/campaigns/${id}/detail`;
+        this.method = "GET";
     }
 }
