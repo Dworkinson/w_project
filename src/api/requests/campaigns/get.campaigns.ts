@@ -1,14 +1,16 @@
 import {BaseRequest} from "../base.request";
 
 interface CampaignsRequest {
-    "page[offset]"?: string | null;
-    "page[limit]"?: string | null;
+    "page[offset]"?: number | null;
+    "page[limit]"?: number | null;
     sort?: string | null;
     way?: string | null;
-    "filter[from]"?: string | null;
-    "filter[to]"?: string | null;
+    "filter[from]"?: lDate | null;
+    "filter[to]"?: lDate | null;
     "filter[type]"?: string | null;
 }
+
+type lDate = string;
 
 export class GetCampaigns extends BaseRequest {
     url: string;
@@ -24,12 +26,12 @@ export class GetCampaigns extends BaseRequest {
     }
 
     pageOffset(offset: number) {
-        this.params["page[offset]"] = `${offset}`;
+        this.params["page[offset]"] = offset;
         return this;
     }
 
     pageLimit(limit: number) {
-        this.params["page[limit]"] = `${limit}`;
+        this.params["page[limit]"] = limit;
         return this;
     }
 
