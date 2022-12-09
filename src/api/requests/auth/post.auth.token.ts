@@ -1,6 +1,6 @@
 import {BaseRequest} from "../base.request";
 
-export class GetAuthToken extends BaseRequest {
+export class PostAuthToken extends BaseRequest {
     url: string;
     method: string;
     data: object;
