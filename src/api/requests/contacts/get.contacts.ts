@@ -1,4 +1,5 @@
 import {BaseRequest} from "../base.request";
+import {Method} from "axios";
 
 interface ContactsRequest {
     page?: number | null;
@@ -8,7 +9,7 @@ interface ContactsRequest {
 
 export class GetContacts extends BaseRequest {
     url: string;
-    method: string;
+    method: Method;
     params: ContactsRequest;
 
     constructor() {

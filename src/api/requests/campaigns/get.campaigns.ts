@@ -1,4 +1,5 @@
 import {BaseRequest} from "../base.request";
+import {Method} from "axios";
 
 interface CampaignsRequest {
     "page[offset]"?: number | null;
@@ -14,7 +15,7 @@ type lDate = string;
 
 export class GetCampaigns extends BaseRequest {
     url: string;
-    method: string;
+    method: Method;
     params: CampaignsRequest;
 
     constructor() {

@@ -1,4 +1,5 @@
 import {BaseRequest} from "../base.request";
+import {Method} from "axios";
 
 interface Contact {
     phone?: number; // required
@@ -13,7 +14,7 @@ interface Field {
 
 export class StoreContact extends BaseRequest {
     url: string;
-    method: string;
+    method: Method;
     data: Contact;
 
     constructor() {

@@ -1,4 +1,5 @@
 import {BaseRequest} from "../base.request";
+import {Method} from "axios";
 
 interface Group {
     name?: string | number;
@@ -8,7 +9,7 @@ interface Group {
 
 export class StoreGroup extends BaseRequest {
     url: string;
-    method: string;
+    method: Method;
     data: Group;
 
     constructor() {

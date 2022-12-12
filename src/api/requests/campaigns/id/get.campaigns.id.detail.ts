@@ -1,8 +1,9 @@
 import {BaseRequest} from "../../base.request";
+import {Method} from "axios";
 
 export class CampaignsDetail extends BaseRequest {
     url: string;
-    method: string;
+    method: Method;
 
     constructor(id: number) {
         super();

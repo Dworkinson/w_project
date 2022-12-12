@@ -1,4 +1,5 @@
 import {BaseRequest} from "../../base.request";
+import {Method} from "axios";
 
 interface SendGroupRequest {
     sender?:      string; // required
@@ -14,7 +15,7 @@ type lDate = string;
 
 export class SendGroups extends BaseRequest {
     url: string;
-    method: string;
+    method: Method;
     data: SendGroupRequest
 
     constructor() {

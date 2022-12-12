@@ -1,4 +1,5 @@
 import {BaseRequest} from "../../base.request";
+import {Method} from "axios";
 
 export interface SendRequest {
     phones?:      Phone[]; // required
@@ -18,7 +19,7 @@ type lDate = string;
 
 export class Send extends BaseRequest {
     url: string;
-    method: string;
+    method: Method;
     data: SendRequest;
 
     constructor() {

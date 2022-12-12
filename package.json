@@ -11,9 +11,17 @@
     "dev:comm": "mocha --ENV dev --MODE common --require ts-node/register --timeout 60000",
     "dev:test": "mocha --ENV dev --MODE test --require ts-node/register --timeout 60000",
     "dev:demo": "mocha --ENV dev --MODE demo --require ts-node/register --timeout 60000",
+    "prod:comm": "mocha --ENV prod --MODE common --require ts-node/register",
     "getToken:stage": "npm run stg:comm src/tests/token.test.ts",
     "accounts:stage": "npm run stg:comm src/tests/accounts.test.ts",
-    "campaigns:stage": "npm run stg:comm src/tests/campaigns.test.ts"
+    "campaigns:stage": "npm run stg:comm src/tests/campaigns.test.ts",
+    "addGroup": "npm run prod:comm src/other/addGroup.test.ts",
+    "addGroup2": "npm run prod:comm src/other/addGroup.test.ts",
+    "addGroup3": "npm run prod:comm src/other/addGroup.test.ts",
+    "checGroups": "npm run prod:comm src/tests/groups.test.ts",
+    "group": "ts-node src/other/testGroup.ts --ENV prod --MODE common",
+    "group2": "ts-node src/other/testGroup2.ts --ENV prod --MODE common",
+    "group3": "ts-node src/other/testGroup2.ts --ENV prod --MODE common"
   },
   "keywords": [],
   "author": "",

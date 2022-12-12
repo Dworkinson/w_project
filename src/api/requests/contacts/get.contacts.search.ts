@@ -1,4 +1,5 @@
 import {BaseRequest} from "../base.request";
+import {Method} from "axios";
 
 interface SearchContactsRequest {
     "page[offset]"?: number | null;
@@ -15,7 +16,7 @@ type lDate = string;
 
 export class SearchContacts extends BaseRequest {
     url: string;
-    method: string;
+    method: Method;
     params: SearchContactsRequest;
 
     constructor() {

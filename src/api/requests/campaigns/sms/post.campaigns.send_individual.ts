@@ -1,4 +1,5 @@
 import {BaseRequest} from "../../base.request";
+import {Method} from "axios";
 
 
 interface SendIndividualRequest {
@@ -20,7 +21,7 @@ type lDate = string;
 
 export class SendIndividual extends BaseRequest {
     url: string;
-    method: string;
+    method: Method;
     data: SendIndividualRequest;
 
     constructor() {
