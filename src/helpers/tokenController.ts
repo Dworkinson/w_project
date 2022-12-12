@@ -1,4 +1,4 @@
-import {GetAuthToken} from "../api/requests/auth/get.auth.token";
+import {PostAuthToken} from "../api/requests/auth/post.auth.token";
 import {config} from "./envController";
 import * as tokens from "../data/tokens.json";
 import * as fs from "fs";
@@ -16,7 +16,7 @@ export class TokenController {
     }
 
     async getToken(): Promise<string> {
-        const request = new GetAuthToken(config.user);
+        const request = new PostAuthToken(config.user);
         const response = await axios(request);
 
         return response.data.bearer;
